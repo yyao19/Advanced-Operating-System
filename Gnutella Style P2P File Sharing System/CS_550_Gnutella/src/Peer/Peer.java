@@ -37,13 +37,13 @@ public class Peer {
 						for(int i = 3; i < info.length; i++){
 							BufferedReader reader = new BufferedReader(new FileReader(file));
 							while((s = reader.readLine()) != null){
-								String temp[] = s.split(" ");
-								if(info[i].equals(temp[0])){
-									Node node = new Node(temp[0], temp[1], Integer.parseInt(temp[2]));
-									peerInfo.local.neighbor.add(node);
-									writer.write(peerInfo.local.nick.peerName + " neighor peer information:");
-									writer.write(node.peerName + " ");
-								}
+							String temp[] = s.split(" ");
+							if(info[i].equals(temp[0])){
+							Node node = new Node(temp[0], temp[1], Integer.parseInt(temp[2]));
+							peerInfo.local.neighbor.add(node);
+							writer.write(peerInfo.local.nick.peerName + " neighor peer information:");
+							writer.write(node.peerName + " ");
+							}
 							}
 						}
 						writer.write("\t\n");
